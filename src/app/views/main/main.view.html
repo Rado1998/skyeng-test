@@ -1,0 +1,24 @@
+<button (click)="removeTab()">
+    Remove tab
+</button>
+<button (click)="addTab()">
+    Add tab
+</button>
+
+<br>
+
+<app-tabs>
+    <app-tab *ngFor="let tab of tabs;let ind=index" class="tabs__item">
+        <app-tab-title class="tabs__title" [class.tabs__title--active]="activeTab==ind" (click)="onClickTabTitle(ind)">
+            Tab <b>{{ tab }}</b> title
+        </app-tab-title>
+        <app-tab-content *ngIf="activeTab==ind">
+            Tab <b>{{ tab }}</b> content
+            <app-test [tabNum]="tab"></app-test>
+        </app-tab-content>
+    </app-tab>
+</app-tabs>
+
+<div *ifViewportSize="'small'">
+    test test
+</div>

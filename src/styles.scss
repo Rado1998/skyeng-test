@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+
+.tabs__titles {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.tabs__item {
+    margin-left: 10px;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.tabs__title {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.tabs__title--active {
+    border-bottom: 2px solid #ff2222;
+}
